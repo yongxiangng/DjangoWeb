@@ -11,11 +11,7 @@
     {% block content %}
     <h1>Homepage</h1>
 
-    <ul>
-        {% for post in all_posts_list %}
-            <li>{{ post.text }}</li>
-        {% endfor %}
-    </ul>
+    {% include "post.html" %}
     {% endblock content %}
 </body>
 
