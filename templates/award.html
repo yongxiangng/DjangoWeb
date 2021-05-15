@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for award in all_awards_list %}
+        <div class="award-entry">
+            <h3><a href="">{{ award.title }}</a></h3>
+            <h4>{{ award.date }}</h4>
+            <p>{{ award.description }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}

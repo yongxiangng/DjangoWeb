@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <title>Home</title>
-</head>
+{% block content %}
+<h1>Homepage</h1>
 
-<body>
-    {% extends 'base.html' %}
-    
-    {% block content %}
-    <h1>Homepage</h1>
-
-    {% include "post.html" %}
-    {% endblock content %}
-</body>
-
-</html>
+{% include "post.html" %}
+{% endblock content %}
