@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'awards.apps.AwardsConfig',
     'pages.apps.PagesConfig',
     'posts.apps.PostsConfig',
+    'projects.apps.ProjectsConfig',
 ]
 
 MIDDLEWARE = [

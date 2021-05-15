@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for project in all_projects_list %}
+        <div class="project-entry">
+            <div class="project-entry-header">
+                <h2>{{ project.title }}</h2>
+                <button onclick="location.href='{{ project.deployment }}'" type="button">View Demo</button>
+                <button onclick="location.href='{{ project.deployment }}'" type="button">Source Code</button>
+                
+                <h3>{{ project.deployment }} {{ project.code }}</h3>
+            </div>
+            <div class="project-entry-abstract">
+                <p>{{ project.abstract }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content %}

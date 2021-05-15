@@ -12,10 +12,14 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Post',
+            name='Project',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('text', models.TextField()),
+                ('title', models.CharField(max_length=200)),
+                ('abstract', models.TextField()),
+                ('description', models.TextField(blank=True, default='', null=True)),
+                ('code', models.URLField()),
+                ('deployment', models.URLField()),
             ],
         ),
     ]
