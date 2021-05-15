@@ -7,7 +7,9 @@
                 <h3>{{ award.title }}</h3>
                 <h3>{{ award.date }}</h3>
             </div>
-            <p>{{ award.description }}</p>
+            <div class="award-entry-description">
+                <p>{{ award.description }}</p>
+            </div>
         </div>
     {% endfor %}
 {% endblock content %}

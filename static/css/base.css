@@ -31,21 +31,28 @@ header h1 a {
     margin-bottom: 2rem;
 }
 
-.award-entry h2 {
-    margin: 0.5rem 0;
+.award-entry-header {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.award-entry h2 a,
-.award-entry h2 a:visited {
-    color: blue;
-    text-decoration: none;
+.award-entry-header h3 {
+    margin: 0.1rem 0;
 }
 
-.award-entry p {
+.award-entry-description p {
     margin: 0;
     font-weight: 400;
 }
 
-.award-entry h2 a:hover {
+/* .award-entry h2 a,
+.award-entry h2 a:visited {
+    color: blue;
+    text-decoration: none;
+} */
+
+/* .award-entry h2 a:hover {
     color: red;
-}
+} */
