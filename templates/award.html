@@ -3,9 +3,13 @@
 {% block content %}
     {% for award in all_awards_list %}
         <div class="award-entry">
-            <h3><a href="">{{ award.title }}</a></h3>
-            <h4>{{ award.date }}</h4>
-            <p>{{ award.description }}</p>
+            <div class="award-entry-header">
+                <h3>{{ award.title }}</h3>
+                <h3>{{ award.month }} {{ award.year }}</h3>
+            </div>
+            <div class="award-entry-description">
+                <p>{{ award.description }}</p>
+            </div>
         </div>
     {% endfor %}
 {% endblock content %}
