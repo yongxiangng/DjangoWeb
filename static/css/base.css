@@ -56,3 +56,43 @@ header h1 a {
 /* .award-entry h2 a:hover {
     color: red;
 } */
+
+.project-entry {
+    margin-bottom: 2rem;
+}
+
+.project-entry-header {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.project-entry-header-title {
+    color: blue;
+}
+
+.project-entry-header-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-entry-header-side button {
+    margin: 0.15rem 0;
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.85;
+    transition-duration: 0.1s;
+}
+
+.project-entry-header-side button:hover {
+    opacity: 1;
+}
