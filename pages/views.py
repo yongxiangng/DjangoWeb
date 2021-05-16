@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, DetailView
 from posts.models import Post
 from awards.models import Award
 from projects.models import Project
@@ -22,3 +22,7 @@ class ProjectsPageView(ListView):
     model = Project
     template_name = 'project.html'
     context_object_name = 'all_projects_list'
+    
+class ProjectsPageDetailView(DetailView):
+    model = Project
+    template_name = 'project_detail.html'
