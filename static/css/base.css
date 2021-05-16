@@ -90,7 +90,6 @@ header h1 a {
     border-radius: 4px;
     cursor: pointer;
     opacity: 0.85;
-    transition-duration: 0.1s;
 }
 
 .project-entry-header-side button:hover {
