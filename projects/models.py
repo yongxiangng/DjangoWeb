@@ -4,7 +4,7 @@ from django.db import models
 class Project(models.Model):
     title = models.CharField(max_length=200)
     abstract = models.TextField()
-    description = models.TextField(null=True, blank=True, default='')
+    description = models.TextField()
     code = models.URLField()
     deployment = models.URLField()
     

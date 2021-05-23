@@ -16,7 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from projects import views as projects_view
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls')),
+    path('api/projects/', projects_view.add_project),
+    path('api/projects/', projects_view.get_all_projects),
+    path('api/projects/<str:project_title>', projects_view.get_project),
 ]
