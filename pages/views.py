@@ -1,14 +1,11 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView, DetailView
-from posts.models import Post
 from awards.models import Award
 from projects.models import Project
 
 # Create your views here.
-class HomePageView(ListView):
-    model = Post
+class HomePageView(TemplateView):
     template_name = 'home.html'
-    context_object_name = 'all_posts_list'
 
 class AboutPageView(TemplateView):
     template_name = 'about.html'

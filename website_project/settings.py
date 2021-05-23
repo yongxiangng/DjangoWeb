@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'about.apps.AboutConfig',
     'awards.apps.AwardsConfig',
     'pages.apps.PagesConfig',
-    'posts.apps.PostsConfig',
     'projects.apps.ProjectsConfig',
 ]
 
