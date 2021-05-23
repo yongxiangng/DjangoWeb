@@ -1,7 +1,6 @@
 import datetime
 from django.test import TestCase
 from django.urls import reverse
-from posts.models import Post
 from awards.models import Award
 from projects.models import Project
 
@@ -15,10 +14,7 @@ class SimpleTests(TestCase):
         response = self.client.get('/about/')
         self.assertEqual(response.status_code, 200)
 
-class HomePageViewTest(TestCase):
-    def setUp(self):
-        Post.objects.create(text='this is another test')
-    
+class HomePageViewTest(TestCase):    
     def test_view_url_exists_at_proper_location(self):
         resp = self.client.get('/')
         self.assertEqual(resp.status_code, 200)
