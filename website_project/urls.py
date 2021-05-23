@@ -17,10 +17,17 @@ from django.contrib import admin
 from django.urls import path, include
 
 from projects import views as projects_view
+from about import views as about_view
+from awards import views as awards_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('pages.urls')),
+    path('', include('pages.urls')),    
+    path('api/about/', about_view.get_about),
+    path('api/about/', about_view.add_about),
+    path('api/awards/', awards_view.add_award),
+    path('api/awards/', awards_view.get_all_awards),
+    path('api/awards/<str:award_title>', awards_view.get_award),
     path('api/projects/', projects_view.add_project),
     path('api/projects/', projects_view.get_all_projects),
     path('api/projects/<str:project_title>', projects_view.get_project),

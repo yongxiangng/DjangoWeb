@@ -7,6 +7,7 @@ import json
 from projects.models import Project
 
 # Create your views here.
+@csrf_exempt
 def get_project(request, project_title):
     if request.method == 'GET':
         try:
@@ -24,6 +25,7 @@ def get_project(request, project_title):
             }])
     return HttpResponse(response, content_type='text/json')
 
+@csrf_exempt
 def get_all_projects(request):
     if request.method == 'GET':
         response_list = []
@@ -48,6 +50,7 @@ def get_all_projects(request):
 def add_project(request):
     if request.method == 'POST':
         payload = json.loads(request.body)
+        payload.reverse()
         
         try:
             for item in payload:
@@ -63,9 +66,9 @@ def add_project(request):
                 'Success': 'Success!'
             }])
         except:
-            response = json.dumps[{
+            response = json.dumps([{
                 'Error': 'Project could not be added!'
-            }]
+            }])
         return HttpResponse(response, content_type='text/json')
     
     elif request.method == 'GET':

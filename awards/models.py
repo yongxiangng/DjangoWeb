@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Award(models.Model):
-    date = models.DateField()
+    date = models.IntegerField()
     title = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True, default='')
     
